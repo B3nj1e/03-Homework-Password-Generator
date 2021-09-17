@@ -30,6 +30,24 @@ function generatePassword() {
     p2 = p1;
     console.log(p2);
   }
+  var p3 = p2;
+  var numberMessage = confirm("Do you want to include numbers in your password?");
+  if (numberMessage){
+    p3 = p2.concat(number);
+    console.log(p3);
+  } else {
+    p3 = p2;
+    console.log(p3);
+  }
+  var p4 = p3;
+  var numberMessage = confirm("Do you want to include special characters in your password?");
+  if (numberMessage){
+    p4 = p3.concat(special);
+    console.log(p4);
+  } else {
+    p4 = p3;
+    console.log(p4);
+  }
 }
 
 // Write password to the #password input
