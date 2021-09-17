@@ -59,14 +59,18 @@ function generatePassword() {
     length = lengthMessage;
   };
   
-  function singleLetter() {
-  index = Math.floor(Math.random()*length),
-  p5 = p4.charAt(index),
+  for (var i = 0; i < length; i++) {
+  index = Math.floor(Math.random()*p4.length);
+  p5 = p4.charAt(index);
+  console.log(p5);
   }
 
-  password = singleLetter() * length;
-  console.log(password);
 
+
+
+  // trying to combine single characters into full length password
+
+  console.log(password);
 
 }
 
