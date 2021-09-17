@@ -2,6 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 // default variables
+var length = ""
 var lengthMax = 128;
 var lengthMin = 8;
 var lower = "abcdefghijklmnopqrstuvwxyz";
@@ -40,13 +41,29 @@ function generatePassword() {
     console.log(p3);
   }
   var p4 = p3;
-  var numberMessage = confirm("Do you want to include special characters in your password?");
-  if (numberMessage){
+  var specialMessage = confirm("Do you want to include special characters in your password?");
+  if (specialMessage){
     p4 = p3.concat(special);
     console.log(p4);
   } else {
     p4 = p3;
     console.log(p4);
+  }
+  var p5 = ""
+  var lengthMessage = prompt("Please choose a password length between 8 and 128 characters");
+  if (lengthMessage > 128) {
+    length = 0
+    var tooLongMessage = prompt("The number you have chosen is larger than 128, please choose a number between 8 and 128.");
+  } else if (lengthMessage < 8) {
+    var tooShortMessage = prompt("The number you have chose is smaller than 8, please choose a number between 8 and 128.");
+    length = 0
+  } else {
+    length = (lengthMessage + tooLongMessage + tooLongMessage);
+    console.log(length);
+    password = length * {
+    index = Math.floor(Math.random() * length)
+    p5 = p4[index]
+    }
   }
 }
 
