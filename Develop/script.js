@@ -52,19 +52,22 @@ function generatePassword() {
   var p5 = ""
   var lengthMessage = prompt("Please choose a password length between 8 and 128 characters");
   if (lengthMessage > 128) {
-    length = 0
-    var tooLongMessage = prompt("The number you have chosen is larger than 128, please choose a number between 8 and 128.");
+    return lengthMessage;
   } else if (lengthMessage < 8) {
-    var tooShortMessage = prompt("The number you have chose is smaller than 8, please choose a number between 8 and 128.");
-    length = 0
+    return lengthMessage;
   } else {
-    length = (lengthMessage + tooLongMessage + tooLongMessage);
-    console.log(length);
-    password = length * {
-    index = Math.floor(Math.random() * length)
-    p5 = p4[index]
-    }
+    length = lengthMessage;
+  };
+  
+  function singleLetter() {
+  index = Math.floor(Math.random()*length),
+  p5 = p4.charAt(index),
   }
+
+  password = singleLetter() * length;
+  console.log(password);
+
+
 }
 
 // Write password to the #password input
