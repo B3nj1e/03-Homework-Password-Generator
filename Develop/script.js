@@ -50,6 +50,7 @@ function generatePassword() {
     console.log(p4);
   }
   var p5 = ""
+  var p6 = ""
   var lengthMessage = prompt("Please choose a password length between 8 and 128 characters");
   if (lengthMessage > 128) {
     return lengthMessage;
@@ -59,19 +60,16 @@ function generatePassword() {
     length = lengthMessage;
   };
   
+  // password generating aspect, initially forming single characters into p5, then trying to combine into one long password
   for (var i = 0; i < length; i++) {
   index = Math.floor(Math.random()*p4.length);
   p5 = p4.charAt(index);
   console.log(p5);
+  password = p6.concat(p5);
   }
 
-
-
-
-  // trying to combine single characters into full length password
-
+  
   console.log(password);
-
 }
 
 // Write password to the #password input
