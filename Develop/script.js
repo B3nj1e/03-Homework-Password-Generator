@@ -65,11 +65,9 @@ function generatePassword() {
   index = Math.floor(Math.random()*p4.length);
   p5 = p4.charAt(index);
   console.log(p5);
-  password = p6.concat(p5);
-  }
-
-  
+  password = p6 += p5;
   console.log(password);
+  }
 }
 
 // Write password to the #password input
