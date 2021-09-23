@@ -52,10 +52,8 @@ function generatePassword() {
   var p5 = ""
   var p6 = ""
   var lengthMessage = prompt("Please choose a password length between 8 and 128 characters");
-  if (lengthMessage > 128) {
-    return lengthMessage;
-  } else if (lengthMessage < 8) {
-    return lengthMessage;
+  if (lengthMessage > 128 || lengthMessage < 8) {
+    prompt("That number is outside the range, please choose a password length between 8 and 128 characters");
   } else {
     length = lengthMessage;
   };
